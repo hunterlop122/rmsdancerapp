@@ -1,4 +1,5 @@
 class DancersController < ApplicationController
+  before_action :authenticate_user!
   def index
     @dancers = Dancer.all
   end
