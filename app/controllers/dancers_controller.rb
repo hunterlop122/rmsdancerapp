@@ -1,5 +1,5 @@
 class DancersController < ApplicationController
-    def index
+  def index
     @dancers = Dancer.all
   end
  def new
