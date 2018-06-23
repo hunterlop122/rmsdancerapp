@@ -17,11 +17,6 @@ body {
     background-color: black;
     color: white;
 }
-
-#nav_bar {
-    background-color:#333030;
-
-}
 #info_box{
     background-color: #1AB7EA;
     padding: 20px;
@@ -57,5 +52,36 @@ body {
     margin: 0 auto;
     text-align: center;
     width: 500px;
+    border-radius: 20px;
     
+}
+#navigation {
+    background-color: #1AB7EA;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+#navigation_text {
+    text-align: right;
+    word-spacing: 10px;
+}
+#navigtion_logo {
+    
+}
+#login {
+    width: 50%;
+    margin:0 auto;
+    background-color: #1AB7EA;
+    background-color:;
+    border-radius: 20px;
+    text-align: center;
+    padding: 15px;
+}
+ input[type=text], input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
