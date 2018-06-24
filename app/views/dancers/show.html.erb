@@ -1,5 +1,4 @@
 <table id="show_dancerData">
-    <%= Dancer.find_each do |dancer| %>
         <thead>
             <tr>
                 <th scope="col" id="Firstname">Firstname</th>
@@ -13,6 +12,8 @@
                 
             </tr>
         </thead>
+    <%= Dancer.find_each do |dancer| %>
+
         <tbody>
             <tr>
                 <td><%= dancer.firstname %></td>
