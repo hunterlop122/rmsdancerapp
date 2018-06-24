@@ -88,13 +88,10 @@ body {
 }
 #navigation {
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
     border-bottom-style: solid;
     border-width: 2px;
     border-color: #1AB7EA;
-
-
-
 }
 
 #login {
@@ -117,4 +114,8 @@ input[type=text], input[type=email], input[type=password] {
     color: black;
     background-color: none;
     padding: none;
+}
+#login_emaillabel, #login_passwordlabel {
+    font-size: 15px;
+
 }
