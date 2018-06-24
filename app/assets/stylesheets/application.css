@@ -54,6 +54,9 @@ body {
     border-color: black;
 
 }
+#show_dancerData td:hover {
+    background-color: #636c73;
+}
 #nav_bar_text, a {
     text-align: right;
     color: white;
