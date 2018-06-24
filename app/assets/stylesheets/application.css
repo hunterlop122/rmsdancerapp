@@ -41,7 +41,7 @@ body {
 }
 #show_dancerData th {
     border-bottom-style: solid;
-    border-width: 2px;
+    border-width: 5px;
     border-color: #1AB7EA;
     padding-bottom: 15px;
     padding-right: 40px;
@@ -49,6 +49,9 @@ body {
 #show_dancerData td {
     padding-top: 10px;
     padding-right: 40px;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: black;
 
 }
 #nav_bar_text, a {
