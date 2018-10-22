@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.0'
+ruby '2.3.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
@@ -11,9 +11,17 @@ group :production do
 end
 
 group :development do
-  gem 'sqlite3'
+  gem 'mysql2', '~> 0.5.2'
+  gem "watir-rails"
 end
-
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'selenium'
+gem 'watir' # Crawler
+gem 'pry' # Ruby REPL
+gem 'rb-readline' # Ruby IRB
+gem 'awesome_print' # Console output
+gem 'remove_emoji'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

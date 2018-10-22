@@ -1,0 +1,121 @@
+current directory: /Users/hunterlopez/Desktop/rmsdancerapp /vendor/bundle/ruby/2.3.0/gems/mysql-2.9.1/ext/mysql_api
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20180827-6136-1v5falt.rb extconf.rb
+checking for mysql_ssl_set()... no
+checking for rb_str_set_len()... yes
+checking for rb_thread_start_timer()... no
+checking for mysql.h... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/hunterlopez/Desktop/rmsdancerapp /vendor/bundle/ruby/2.3.0/extensions/universal-darwin-17/2.3.0/mysql-2.9.1/mkmf.log
+
+current directory: /Users/hunterlopez/Desktop/rmsdancerapp /vendor/bundle/ruby/2.3.0/gems/mysql-2.9.1/ext/mysql_api
+make "DESTDIR=" clean
+
+current directory: /Users/hunterlopez/Desktop/rmsdancerapp /vendor/bundle/ruby/2.3.0/gems/mysql-2.9.1/ext/mysql_api
+make "DESTDIR="
+compiling mysql.c
+mysql.c:79:2: error: unknown type name 'my_bool'
+        my_bool *is_null;
+        ^
+mysql.c:361:5: error: use of undeclared identifier 'my_bool'
+    my_bool b;
+    ^
+mysql.c:391:10: error: use of undeclared identifier 'MYSQL_SET_CLIENT_IP'; did you mean 'MYSQL_SET_CHARSET_DIR'?
+    case MYSQL_SET_CLIENT_IP:
+         ^~~~~~~~~~~~~~~~~~~
+         MYSQL_SET_CHARSET_DIR
+/usr/local/Cellar/mysql/8.0.12/include/mysql/mysql.h:177:3: note: 'MYSQL_SET_CHARSET_DIR' declared here
+  MYSQL_SET_CHARSET_DIR,
+  ^
+mysql.c:398:10: error: use of undeclared identifier 'MYSQL_SECURE_AUTH'; did you mean 'MYSQL_DEFAULT_AUTH'?
+    case MYSQL_SECURE_AUTH:
+         ^~~~~~~~~~~~~~~~~
+         MYSQL_DEFAULT_AUTH
+/usr/local/Cellar/mysql/8.0.12/include/mysql/mysql.h:188:3: note: 'MYSQL_DEFAULT_AUTH' declared here
+  MYSQL_DEFAULT_AUTH,
+  ^
+mysql.c:400:6: error: use of undeclared identifier 'b'
+            b = 1;
+            ^
+mysql.c:402:6: error: use of undeclared identifier 'b'
+            b = 0;
+            ^
+mysql.c:403:14: error: use of undeclared identifier 'b'
+        v = (char*)&b;
+                    ^
+mysql.c:391:10: error: duplicate case value 'MYSQL_SET_CHARSET_DIR'
+    case MYSQL_SET_CLIENT_IP:
+         ^
+mysql.c:384:10: note: previous case defined here
+    case MYSQL_SET_CHARSET_DIR:
+         ^
+mysql.c:878:5: error: use of undeclared identifier 'my_bool'
+    my_bool true = 1;
+    ^
+mysql.c:883:61: error: cannot take the address of an rvalue of type 'int'
+    if (mysql_stmt_attr_set(s, STMT_ATTR_UPDATE_MAX_LENGTH, &true))
+                                                            ^~~~~
+mysql.c:2049:52: error: use of undeclared identifier 'MYSQL_SECURE_AUTH'; did you mean 'MYSQL_DEFAULT_AUTH'?
+    rb_define_const(cMysql, "SECURE_AUTH", INT2NUM(MYSQL_SECURE_AUTH));
+                                                   ^~~~~~~~~~~~~~~~~
+                                                   MYSQL_DEFAULT_AUTH
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/include/ruby-2.3.0/ruby/ruby.h:1561:31: note: expanded from macro 'INT2NUM'
+#define INT2NUM(x) RB_INT2NUM(x)
+                              ^
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/include/ruby-2.3.0/ruby/ruby.h:1538:38: note: expanded from macro 'RB_INT2NUM'
+# define RB_INT2NUM(v) INT2FIX((int)(v))
+                                     ^
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/include/ruby-2.3.0/ruby/ruby.h:256:30: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) (((VALUE)(i))<<1 | RUBY_FIXNUM_FLAG)
+                             ^
+/usr/local/Cellar/mysql/8.0.12/include/mysql/mysql.h:188:3: note: 'MYSQL_DEFAULT_AUTH' declared here
+  MYSQL_DEFAULT_AUTH,
+  ^
+mysql.c:2050:61: error: use of undeclared identifier 'MYSQL_OPT_GUESS_CONNECTION'; did you mean 'MYSQL_OPT_RECONNECT'?
+    rb_define_const(cMysql, "OPT_GUESS_CONNECTION", INT2NUM(MYSQL_OPT_GUESS_CONNECTION));
+                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                            MYSQL_OPT_RECONNECT
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/include/ruby-2.3.0/ruby/ruby.h:1561:31: note: expanded from macro 'INT2NUM'
+#define INT2NUM(x) RB_INT2NUM(x)
+                              ^
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/include/ruby-2.3.0/ruby/ruby.h:1538:38: note: expanded from macro 'RB_INT2NUM'
+# define RB_INT2NUM(v) INT2FIX((int)(v))
+                                     ^
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/include/ruby-2.3.0/ruby/ruby.h:256:30: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) (((VALUE)(i))<<1 | RUBY_FIXNUM_FLAG)
+                             ^
+/usr/local/Cellar/mysql/8.0.12/include/mysql/mysql.h:186:3: note: 'MYSQL_OPT_RECONNECT' declared here
+  MYSQL_OPT_RECONNECT,
+  ^
+mysql.c:2051:68: error: use of undeclared identifier 'MYSQL_OPT_USE_EMBEDDED_CONNECTION'
+    rb_define_const(cMysql, "OPT_USE_EMBEDDED_CONNECTION", INT2NUM(MYSQL_OPT_USE_EMBEDDED_CONNECTION));
+                                                                   ^
+mysql.c:2052:66: error: use of undeclared identifier 'MYSQL_OPT_USE_REMOTE_CONNECTION'
+    rb_define_const(cMysql, "OPT_USE_REMOTE_CONNECTION", INT2NUM(MYSQL_OPT_USE_REMOTE_CONNECTION));
+                                                                 ^
+mysql.c:2053:54: error: use of undeclared identifier 'MYSQL_SET_CLIENT_IP'; did you mean 'MYSQL_SET_CHARSET_DIR'?
+    rb_define_const(cMysql, "SET_CLIENT_IP", INT2NUM(MYSQL_SET_CLIENT_IP));
+                                                     ^~~~~~~~~~~~~~~~~~~
+                                                     MYSQL_SET_CHARSET_DIR
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/include/ruby-2.3.0/ruby/ruby.h:1561:31: note: expanded from macro 'INT2NUM'
+#define INT2NUM(x) RB_INT2NUM(x)
+                              ^
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/include/ruby-2.3.0/ruby/ruby.h:1538:38: note: expanded from macro 'RB_INT2NUM'
+# define RB_INT2NUM(v) INT2FIX((int)(v))
+                                     ^
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/include/ruby-2.3.0/ruby/ruby.h:256:30: note: expanded from macro 'INT2FIX'
+#define INT2FIX(i) (((VALUE)(i))<<1 | RUBY_FIXNUM_FLAG)
+                             ^
+/usr/local/Cellar/mysql/8.0.12/include/mysql/mysql.h:177:3: note: 'MYSQL_SET_CHARSET_DIR' declared here
+  MYSQL_SET_CHARSET_DIR,
+  ^
+In file included from mysql.c:2287:
+./error_const.h:2605:27: error: use of undeclared identifier 'ER_XPLUGIN_IP'
+    rb_define_mysql_const(ER_XPLUGIN_IP);
+                          ^
+16 errors generated.
+make: *** [mysql.o] Error 1
+
+make failed, exit code 2

@@ -1,0 +1,2 @@
+module InputInfoHelper
+end
